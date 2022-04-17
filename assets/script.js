@@ -25,4 +25,16 @@ $(document).ready(function() {
             $(this).addClass("future");
         }
     });
+        description.each(function() {
+
+        for (let i = 0; i < localStorage.length; i++) {
+            let objectKey = localStorage.key(i);
+            let taskValue = localStorage.getItem(objectKey);
+            let hourText = $(this).siblings(".hour").text();
+           
+            if (objectKey === hourText) {
+                $(this).val(taskValue);
+            }
+        }
+    });
 });
