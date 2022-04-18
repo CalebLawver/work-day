@@ -1,5 +1,5 @@
 # Work Day Scheduler Starter Code
-https://caleblawver.github.io/Work-Day-Scheduler/
+https://caleblawver.github.io/work-day/
 
 # User Story
 * AS AN employee with a busy schedule
