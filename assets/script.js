@@ -25,16 +25,24 @@ $(document).ready(function() {
             $(this).addClass("future");
         }
     });
-        description.each(function() {
+    
+    $(saveButton).on("click", function() {
+        var value = $(this).siblings(description).val();
+        var time = $(this).parent().attr("id");
 
-        for (let i = 0; i < localStorage.length; i++) {
-            let objectKey = localStorage.key(i);
-            let taskValue = localStorage.getItem(objectKey);
-            let hourText = $(this).siblings(".hour").text();
-           
-            if (objectKey === hourText) {
-                $(this).val(taskValue);
-            }
-        }
+        localStorage.setItem(time, value);
     });
+
+    $("#8hour .description").val(localStorage.getItem("8hour"));
+    $("#9hour .description").val(localStorage.getItem("9hour"));
+    $("#10hour .description").val(localStorage.getItem("10hour"));
+    $("#11hour .description").val(localStorage.getItem("11hour"));
+    $("#12hour .description").val(localStorage.getItem("12hour"));
+    $("#1hour .description").val(localStorage.getItem("1hour"));
+    $("#2hour .description").val(localStorage.getItem("2hour"));
+    $("#3hour .description").val(localStorage.getItem("3hour"));
+    $("#4hour .description").val(localStorage.getItem("4hour"));
+    $("#5hour .description").val(localStorage.getItem("5hour"));
+    $("#6hour .description").val(localStorage.getItem("6hour"));
+
 });
