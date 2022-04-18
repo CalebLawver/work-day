@@ -28,10 +28,9 @@ $(document).ready(function() {
     });
     
     $(saveButton).on("click", function() {
-        var value = $(this).siblings(description).val();
+        var value = $(this).siblings(".description").val();
         var time = $(this).parent().attr("id");
-        debugger;
-
+        console.log(value);
         localStorage.setItem(time, value);
     });
 
