@@ -9,7 +9,8 @@ $(document).ready(function() {
     console.log(typeof currentHour);
 
     description.each(function () {
-        let timeBlock = parseInt($(this).attr("id"));
+        let timeBlock = parseInt($(this).parent().attr("id"));
+        console.log(typeof timeBlock);
 
         if (timeBlock < currentHour) {
             $(this).addClass("past");
@@ -29,6 +30,7 @@ $(document).ready(function() {
     $(saveButton).on("click", function() {
         var value = $(this).siblings(description).val();
         var time = $(this).parent().attr("id");
+        debugger;
 
         localStorage.setItem(time, value);
     });
